@@ -176,6 +176,4 @@ describe 'collections practice vol 2.' do
       expect(organize_schools(schools)).to eq(organized_schools)
     end
 
-  end
-
-end
+ 
