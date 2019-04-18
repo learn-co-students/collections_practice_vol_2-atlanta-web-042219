@@ -1,17 +1,13 @@
-require 'pry'
 def begins_with_r(array)
-  counter = 0
+  r = nil
   array.each do |element|
     if element.start_with?("r") == true
-      counter += 1
+      r = true
+    else r = false
     end
   end
-    if counter == array.length
-    return true
-    else return false
-    end
+  r
 end
-#Optimize code, remove counter, have a nil value to change to if it does/doesn't start with
 
 def contain_a(array)
   array.map {|e| e.include?("a") ? e : nil}.compact
@@ -29,9 +25,8 @@ def first_wa(array)
 end
 
 def remove_non_strings(array)
-  array.collect {|e| e.is_a?(String) ? e : nil}.compact
+  array.delete_if {|e| !e.is_a?(String)}
 end
-#switch to delete_if instead of creating a new array
 
 def count_elements(array)
   new_array = array.each do |hash|
