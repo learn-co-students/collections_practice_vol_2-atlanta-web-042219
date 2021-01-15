@@ -24,5 +24,13 @@ def remove_non_strings(arr)
 end
 
 def count_elements(arr)
-     return arr.length
+     new_arr = arr.group_by(&:itself).map{|k,v| k.merge(count: v.length)}
+     return new_arr
+    #for each instance of  the occurance of somrthing in hash iterate count
+end
+
+def merge_data(arr1, arr2)
+    new_arr = arr 
+    binding.pry
+    return new_arr
 end
