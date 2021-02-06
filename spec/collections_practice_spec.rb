@@ -149,7 +149,6 @@ describe 'collections practice vol 2.' do
   end
 
   describe '#merge_data' do
-
     # Question 6
 
     it 'combines two nested data structures into one' do
